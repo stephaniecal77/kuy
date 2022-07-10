@@ -1,1 +1,1325 @@
-tesss
+<!doctype html>
+<html amp lang="id" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<head>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript> <style amp-boilerplate> body { -webkit-animation: none; -moz-animation: none; -ms-animation: none; animation: none } </style> </noscript>
+    <style amp-custom>
+        :root {
+            --small-font: 12px;
+            --normal-font: 14px;
+            --large-font: 16px;
+            --x-large-font: 18px
+        }
+
+        body {
+            font-size: var(--small-font);
+            display: flex;
+            flex-direction: column;
+            padding-top: 54px;
+            padding-bottom: 52px
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        summary {
+            outline: none
+        }
+
+        .container {
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99
+        }
+
+        .logo-container .logo {
+            width: calc(38px*180/45);
+            display: block
+        }
+
+        .logo-container .logo amp-img {
+            flex-grow: 1
+        }
+
+        .site-menu {
+            width: 60%;
+            background-color: #01091a
+        }
+
+        .site-menu amp-img {
+            margin-right: 10px
+        }
+
+        .site-menu amp-img.chevron-right {
+            position: absolute;
+            right: 0;
+            filter: invert(1);
+            transition: transform .3s;
+            transform-origin: center
+        }
+
+        .site-menu details[open]>summary>section>amp-img.chevron-right {
+            transform: rotate(90deg)
+        }
+
+        .site-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: var(--large-font)
+        }
+
+        .site-menu li+li,
+        .site-menu summary,
+        .site-menu article>ul {
+            margin-top: 2px
+        }
+
+        .site-menu li>a,
+        .site-menu summary {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #0d1b39;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        .site-menu details details summary,
+        .site-menu details li>a {
+            padding-left: 45px;
+            background-color: #06122c;
+            cursor: pointer
+        }
+
+        .site-menu details details li>a {
+            padding-left: 75px;
+            background-color: #040d20;
+            cursor: pointer
+        }
+
+        .site-menu-hamburger {
+            height: 18px;
+            width: 18px;
+            margin: 0;
+            position: absolute;
+            right: 25px;
+            cursor: pointer
+        }
+
+        .site-menu-trigger [data-icon=menu] {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 58%;
+            bottom: auto;
+            right: auto;
+            transform: translateX(-50%) translateY(-50%);
+            width: 18px;
+            height: 2px;
+            background-color: #8e8e8e;
+            transition: .5s ease-in-out
+        }
+
+        .site-menu-trigger [data-icon=menu]:before,
+        .site-menu-trigger [data-icon=menu]:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: inherit;
+            left: 0
+        }
+
+        .site-menu-trigger [data-icon=menu]:before {
+            bottom: 5px
+        }
+
+        .site-menu-trigger [data-icon=menu]:after {
+            top: 5px
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            font-size: var(--x-large-font);
+            padding: 0;
+            width: 100%
+        }
+
+        .link-container a {
+            width: 50%;
+            text-align: left;
+            padding: 15px 20px;
+            text-transform: uppercase
+        }
+
+        .login-button,
+        .register-button {
+            color: #fff
+        }
+
+        .main-menu-container {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 10px 0;
+            background-color: #02071c
+        }
+
+        .main-menu-container li {
+            flex-basis: calc(25% - 10px);
+            padding: 5px
+        }
+
+        .main-menu-container li a {
+            display: flex;
+            padding: 5px 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            font-size: var(--normal-font);
+            text-transform: uppercase
+        }
+
+        .main-menu-container li amp-img {
+            margin: 8px 0
+        }
+
+        .jackpot-container {
+            display: flex;
+            justify-content: center;
+            position: relative
+        }
+
+        .jackpot-container .jackpot-prize {
+            color: #fff
+        }
+
+        .jackpot-container .jackpot-currency {
+            color: #03ffd8
+        }
+
+        .footer-container {
+            text-align: center
+        }
+
+        .footer-container .bank-list,
+        .footer-container .social-media-list,
+        .footer-container .contact-list,
+        .footer-container .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 10px 0;
+            list-style-type: none
+        }
+
+        .footer-container .contact-list li {
+            flex-basis: 50%
+        }
+
+        .footer-container .contact-list li a {
+            margin: 5px 10px;
+            display: flex;
+            align-items: center;
+            background-color: #040a2a;
+            border-radius: 5px;
+            color: #fff;
+            font-size: var(--normal-font)
+        }
+
+        .footer-container .contact-list>li a i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            width: 36px;
+            height: 36px;
+            margin-right: 20px;
+            border-radius: 15%;
+            background: #51c332
+        }
+
+        .footer-container .contact-list>li a i amp-img {
+            margin: 5px;
+            flex-basis: 0;
+            -ms-flex-preferred-size: 0;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1
+        }
+
+        .footer-container .social-media-list {
+            justify-content: center
+        }
+
+        .footer-container .social-media-list li {
+            flex-basis: 25%
+        }
+
+        .footer-container .bank-list {
+            justify-content: center
+        }
+
+        .footer-container .bank-list li {
+            flex-basis: 25%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px;
+            height: 27px
+        }
+
+        .footer-container .bank-list span[data-online='true'],
+        .footer-container .bank-list span[data-online='false'] {
+            width: 5px;
+            margin-right: 5px;
+            border-radius: 2px
+        }
+
+        .footer-container .bank-list span[data-online='true'] {
+            background-color: #f3cf02
+        }
+
+        .footer-container .bank-list span[data-online='false'] {
+            background-color: rgb(238, 163, 0)
+        }
+
+        .footer-container .footer-links {
+            background-color: #0a1749;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .footer-container .footer-links li {
+            flex-basis: calc(25% - 3px);
+            margin-bottom: 5px
+        }
+
+        .footer-container .footer-links>li:not(:nth-child(5n+5)):not(:first-child) {
+            border-left: 1px solid #fff
+        }
+
+        .footer-container .footer-links li a {
+            padding: 5px;
+            color: #fff;
+            font-size: var(--normal-font)
+        }
+
+        .site-description {
+            background-color: #273341;
+            padding: 10px
+        }
+
+        .footer-container h1,
+        .footer-container h2,
+        .footer-container h3,
+        .footer-container h4 {
+            display: block
+        }
+
+        .copyright {
+            padding: 25px 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .copyright div {
+            padding-bottom: 10px
+        }
+
+        .fixed-footer {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            background-color: #273341;
+            padding: 5px 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99
+        }
+
+        .fixed-footer a {
+            flex-basis: calc((100% - 15px*6)/5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #999
+        }
+
+        .fixed-footer a.active {
+            color: #0195ff
+        }
+
+        @media(min-width:768px) {
+            body {
+                font-size: var(--normal-font)
+            }
+            .container {
+                width: 970px
+            }
+            .site-menu {
+                width: 20%
+            }
+        }
+
+        @media(min-width:1200px) {
+            .container {
+                width: 1170px
+            }
+        }
+
+        @media(min-width:992px) {
+            .container {
+                width: 970px
+            }
+        }
+
+        @font-face {
+            font-family: 'Verdana';
+            src: url('/fonts/Lato-Regular.woff2') format('woff2'), url('/fonts/Lato-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal
+        }
+
+        @keyframes pulse {
+            0% {
+                filter: initial
+            }
+            50% {
+                filter: brightness(40.5) drop-shadow(0 0 10px white)
+            }
+        }
+
+        body {
+            font-family: 'Verdana';
+            background-color: #0a0814
+        }
+
+        .logo-container {
+            justify-content: space-between;
+            padding: 0;
+            background-color: #17132d
+        }
+
+        .logo-container .logo {
+            padding: 10px
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: space-between;
+            min-width: 100px;
+            align-self: stretch
+        }
+
+        .header-right .register-section {
+            align-self: stretch;
+            align-items: center;
+            display: flex;
+            border-right-width: 0px;
+            border-right-style: groove;
+            border-right-color: #4d5054;
+            padding: 10px 15px
+        }
+
+        .header-right .register-section a {
+            padding: 7px 15px
+        }
+
+        .header-right .hamburger-section {
+            align-self: center;
+            padding: 10px 0 10px 10px;
+            margin: 10px 0 10px 10px
+        }
+
+        .site-menu-hamburger {
+            position: initial;
+            right: initial
+        }
+
+        .site-menu-trigger [data-icon=menu] {
+            position: initial;
+            left: initial;
+            right: initial;
+            top: initial;
+            bottom: initial;
+            background-color: #f41168
+        }
+
+        .site-menu-trigger [data-icon="menu"]:before,
+        .site-menu-trigger [data-icon="menu"]:after {
+            right: 0;
+            left: initial
+        }
+
+        .site-menu-trigger [data-icon="menu"]:before {
+            width: 14px
+        }
+
+        .site-menu-trigger [data-icon="menu"]:after {
+            width: 22px
+        }
+
+        .site-menu {
+            background-color: #09020e
+        }
+
+        .site-menu li+li,
+        .site-menu summary,
+        .site-menu article>ul {
+            margin-top: 0
+        }
+
+        .site-menu li+li,
+        .site-menu details article {
+            border-top: 2px solid #190620
+        }
+
+        .site-menu li>a,
+        .site-menu summary,
+        .site-menu details details summary,
+        .site-menu details li>a,
+        .site-menu details details li>a {
+            border-left: 3px solid #856f94;
+            color: #766284;
+            background-color: #09020e
+        }
+
+        .site-menu>ul>li:first-child>a,
+        .site-menu details[open]>summary,
+        .site-menu details[open]>summary details[open]>summary {
+            border-left-color: #f60086;
+            color: #fff
+        }
+
+        .register-button,
+        .login-button {
+            border-radius: 5px
+        }
+
+        .link-container {
+            padding: 20px 0;
+            font-size: var(--normal-font);
+            background-color: #084654;
+            background-image: linear-gradient(to right, #ffd000 0%, #663e02 100%)
+        }
+
+        .link-container a {
+            margin-top: 10px;
+            width: auto;
+            padding: 5px 15px;
+            margin-left: 10px;
+            align-self: center
+        }
+
+        amp-carousel.main-menu-container .amp-carousel-button:not(.amp-disabled) {
+            animation: none;
+            visibility: visible
+        }
+
+        amp-carousel.main-menu-container div.amp-carousel-button-next,
+        amp-carousel.main-menu-container div.amp-carousel-button-prev {
+            opacity: 1;
+            pointer-events: initial
+        }
+
+        .amp-carousel-button-prev {
+            left: 0
+        }
+
+        .amp-carousel-button-next {
+            right: 0
+        }
+
+        .main-menu-container {
+            padding: 0 0 10px 0;
+            justify-content: center;
+            background-color: #0a0814
+        }
+
+        .main-menu-container .amp-carousel-button-next,
+        .main-menu-container .amp-carousel-button-prev {
+            width: 20px;
+            height: 100%;
+            background-color: #fe0178;
+            color: #fff
+        }
+
+        .main-menu-container li a {
+            font-size: var(--small-font);
+            color: #736d99;
+            padding: 10px
+        }
+
+        .jackpot-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d0b18;
+            color: #fff;
+            text-shadow: 0 2px 22px #ed00ff;
+            font-size: var(--x-large-font);
+            text-transform: uppercase;
+            padding: 10px 0
+        }
+
+        .popular-game-title-container {
+            background-color: #f1e206;
+            background-image: linear-gradient(to right, #f1e206 0%, #835900 100%);
+            color: #fff
+        }
+
+        .popular-game-title-container .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px
+        }
+
+        .popular-game-title-container .title .popular-games-icon {
+            margin-right: 10px
+        }
+
+        .popular-game-title-container .title {
+            font-size: var(--large-font);
+            display: flex;
+            align-items: center
+        }
+
+        .popular-game-title-container a {
+            padding: 6px 8px;
+            border-radius: 25px;
+            font-size: 10px;
+            background-color: rgba(252, 247, 0, 0.64);
+            color: #fff
+        }
+
+        .bigger-game-list ul {
+            padding: 5px 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none
+        }
+
+        .bigger-game-list ul>li {
+            max-width: calc(100%/3 - 10px);
+            min-width: calc(100%/4 - 10px);
+            flex-basis: 133px;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            font-size: 80%
+        }
+
+        .bigger-game-list ul .inner-game-item {
+            margin: 0;
+            padding: 5px;
+            border-radius: 25px;
+            background-color: #1e1a31;
+            background-image: linear-gradient(to bottom, #1e1a31 0%, #171429 100%);
+            display: block;
+            font-weight: normal
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container {
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            margin-bottom: 5px;
+            border-radius: 25px;
+            overflow: hidden
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container>amp-img,
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container>amp-img {
+            background-color: #000;
+            transition: transform .2s;
+            transform-origin: center
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(243, 207, 3, 0.85)
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container>a {
+            margin: 0
+        }
+
+        .bigger-game-list ul .inner-game-item .game-name {
+            display: block;
+            margin: 8px 0 4px;
+            padding: 0 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis
+        }
+
+        .bigger-game-list ul input[type="radio"] {
+            position: absolute;
+            visibility: hidden;
+            left: -99em
+        }
+
+        .bigger-game-list ul input[type="radio"]:not(:checked)~.wrapper-container .game-link-container {
+            display: none
+        }
+
+        .bigger-game-list ul input[type="radio"]:checked~.wrapper-container>amp-img {
+            transform: scale(1.25)
+        }
+
+        .play-now {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 18px;
+            padding: 5px;
+            background-color: #f8007e;
+            background-image: linear-gradient(to right, #f8007e 0%, #a500e0 100%);
+            color: #fff;
+            width: 80%
+        }
+
+        .contact-list-container {
+            margin-top: 10px;
+            background: #332a63;
+            background-image: linear-gradient(to bottom, #332a63 0%, #221c40 100%)
+        }
+
+        .footer-container .contact-list {
+            justify-content: center
+        }
+
+        .footer-container .contact-list li a {
+            background-color: #0a0814;
+            padding: 3px 15px 3px 3px;
+            font-size: var(--small-font)
+        }
+
+        .footer-container .contact-list>li a i {
+            width: 35px;
+            height: 35px;
+            background-color: #20254f
+        }
+
+        .footer-container .social-media-list li {
+            flex-basis: auto;
+            margin: 10px
+        }
+
+        .footer-container .footer-links {
+            background-color: #141125;
+            align-items: center
+        }
+
+        .footer-container .footer-links li {
+            flex-basis: auto;
+            padding: 2.5px 10px
+        }
+
+        .footer-container .footer-links li a {
+            color: #f5c904
+        }
+
+        .footer-container .footer-links>li:not(:nth-child(5n+5)):not(:first-child) {
+            border: none
+        }
+
+        .fixed-footer a {
+            background-color: inherit;
+            flex-basis: calc((100% - 15px*6)/5);
+            max-width: 75px;
+            color: #736d99;
+            font-size: var(--small-font)
+        }
+
+        .fixed-footer a.active {
+            color: #ff35ed
+        }
+
+        .fixed-footer .center {
+            transform: scale(2.5) translateY(-5px);
+            background: center no-repeat;
+            background-size: contain;
+            background-color: inherit;
+            border-radius: 50%
+        }
+
+        .fixed-footer amp-img {
+            max-width: 40%;
+            margin-bottom: 5px
+        }
+
+        .fixed-footer .live-chat-icon {
+            animation: pulse 3s infinite
+        }
+
+        body {
+            background: #273341
+        }
+
+        .logo-container {
+            background: #273341
+        }
+
+        .header-right .register-section {
+            border-right-color: #4d5054
+        }
+
+        .site-menu-trigger [data-icon=menu] {
+            background-color: #f7f7f7
+        }
+
+        .site-menu {
+            background-color: #0a0a0a
+        }
+
+        .site-menu li+li,
+        .site-menu details article {
+            border-color: #0e0e0e
+        }
+
+        .site-menu li>a,
+        .site-menu summary,
+        .site-menu details details summary,
+        .site-menu details li>a,
+        .site-menu details details li>a {
+            border-color: #4a4a4a;
+            color: #ffffff;
+            background-color: #161616
+        }
+
+        .site-menu>ul>li:first-child>a,
+        .site-menu details[open]>summary,
+        .site-menu details[open]>summary details[open]>summary {
+            border-left-color: #ffeb00;
+            color: #fff
+        }
+
+        .link-container {
+            background-color: #141414;
+            background-image: linear-gradient(to right, #141414 0%, #000 100%)
+        }
+
+        .main-menu-container {
+            background-color: inherit
+        }
+
+        .main-menu-container .amp-carousel-button-next,
+        .main-menu-container .amp-carousel-button-prev {
+            background-color: #949100;
+            color: #484848
+        }
+
+        .main-menu-container li a {
+            color: #e7d001
+        }
+
+        .jackpot-container {
+            background-color: rgba(21, 21, 21, .83);
+            color: #fff;
+            text-shadow: 0 2px 22px #13f703
+        }
+
+        .popular-game-title-container {
+            background-color: #50c22e;
+            background: linear-gradient(to right, #50c22e 0%, #2a7118 100%);
+            color: #fff
+        }
+
+        .popular-game-title-container a {
+            background-color: #0eff00;
+            color: #000
+        }
+
+        .bigger-game-list ul>li {
+            color: #fff
+        }
+
+        .bigger-game-list ul .inner-game-item {
+            background-color: #1fa007;
+            background-image: linear-gradient(to bottom, #1fa007 0%, #184e05 100%)
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container>amp-img {
+            background-color: #000
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container {
+            background-color: rgba(253, 194, 0, 0.85)
+        }
+
+        .play-now {
+            background: #26700c;
+            background-image: linear-gradient(to right, #26700c 0%, #16e601 100%);
+            color: #fff
+        }
+
+        .register-button {
+            background: #c29031
+        }
+
+        .login-button {
+            background: transparent;
+            border: 1px solid #ff9400
+        }
+
+        .footer-container {
+            color: #ffffff
+        }
+
+        .footer-container .contact-list-container {
+            background: #273341
+        }
+
+        .footer-container .contact-list li a {
+            background-color: #c29031;
+            color: #ffffff
+        }
+
+        .footer-container .contact-list>li a i {
+            background-color: #084654
+        }
+
+        .footer-container .footer-links {
+            background-color: inherit
+        }
+
+        .footer-container .footer-links li a {
+            color: #fff
+        }
+
+        .site-description {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .fixed-footer a {
+            background-color: inherit;
+            color: #ffffff
+        }
+
+        .fixed-footer a.active {
+            color: #fecf00
+        }
+
+        table.tbuah {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+            font-size: calc(8px+1vh);
+            margin: 0 20px 0 0;
+        }
+
+        table.tbuah td,
+        table.tbuah th {
+            border: 1px solid #0b9ab1;
+            padding: 10px 5px 10px;
+        }
+
+        table.tbuah tbody td {
+            font-size: calc(8px+1vh);
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        table.tbuah thead {
+            background: #ffd410;
+        }
+
+        table.tbuah thead th {
+            font-size: calc(12px+1vh);
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            background: #c29031
+        }
+
+        p {
+            text-align: justify
+        }
+    </style>
+
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <link itemprop="mainEntityOfPage" rel="canonical" href="https://kuy-33l.pages.dev/">
+    <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="favicon.ico">
+    <title>Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Rajaslot7 merupakan situs agen slot pulsa via online dengan informasi bonus tergacor jaminan auto maxwin dan permainan slot depo pulsa hanya 10 Ribu." />
+    <meta name="keywords" content="situs slot, slot pulsa, slot deposit pulsa, slot online" />
+    <meta name="robots" content="index,follow">
+    <meta name="language" content="Indonesia">
+    <meta name="author" content="Rajaslot7">
+    <meta name="googlebot" content="index,follow" />
+    <meta property="og:url" content="https://kuy-33l.pages.dev/" />
+    <meta property="og:image" content="https://imgur.com/QUGARSr.jpg" />
+    <meta property="og:title" content="Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin" />
+    <meta property="og:description" content="Rajaslot7 merupakan situs agen slot pulsa via online dengan informasi bonus tergacor jaminan auto maxwin dan permainan slot depo pulsa hanya 10 Ribu." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#020e34">
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    <meta name="google-site-verification" content="1PI4bUcVCC-S1di9AwbIkzVrjHGw1i2VMWX75_l5uCo" />
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Game",
+            "name": "Slot Pulsa Online Bonus Tergacor",
+            "author": {
+                "@type": "Person",
+                "name": "Slot Pulsa"
+            },
+            "headline": "Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin",
+            "description": "Rajaslot7 merupakan situs agen slot pulsa via online dengan informasi bonus tergacor jaminan auto maxwin dan permainan slot depo pulsa hanya 10 Ribu.",
+            "keywords": ["situs slot, slot pulsa, slot deposit pulsa, slot online"],
+            "image": "https://imgur.com/QUGARSr.jpg",
+            "url": "https://imgur.com/QUGARSr.jpg",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Judi Slot Pulsa"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue" : "99",
+                "ratingCount" : "6778899",
+                "reviewCount" : "99",
+                "worstRating" : "0",
+                "bestRating" : "100"
+            },
+            "inLanguage": "id-ID"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Slot Pulsa",
+            "alternateName": "Slot Pulsa",
+            "url": "https://kuy-33l.pages.dev/",
+            "logo": "https://imgur.com/1APPgCO.png",
+            "sameAs": "https://kuy-33l.pages.dev/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://kuy-33l.pages.dev/"
+            },
+            "headline": "Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin",
+            "description": "Rajaslot7 merupakan situs agen slot pulsa via online dengan informasi bonus tergacor jaminan auto maxwin dan permainan slot depo pulsa hanya 10 Ribu.",
+            "image": [
+                "https://imgur.com/QUGARSr.jpg"
+            ],
+            "author": {
+                "@type": "Organization",
+                "name": "Slot Pulsa",
+                "url": "https://kuy-33l.pages.dev/"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Slot Pulsa",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://imgur.com/QUGARSr.jpg"
+                }
+            },
+            "datePublished": "2022-07-09T21:22:22+00:00",
+            "dateModified": "2022-07-09T22:22:22+00:00"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://kuy-33l.pages.dev/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Slot Pulsa",
+                    "item": "https://kuy-33l.pages.dev/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin"
+                }
+            ]
+        }
+    </script>
+
+</head>
+
+<body>
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+            {
+                "vars": {
+                    "gtag_id": "G-5YMEXWKJLK",
+                    "config": {
+                        "G-5YMEXWKJLK": {
+                            "groups": "default"
+                        }
+                    }
+                }
+            }
+        </script>
+    </amp-analytics>
+    
+    <div class="logo-container">
+        <a href="https://kuy-33l.pages.dev/" class="logo">
+            <amp-img layout="responsive" height="52" width="175" src="https://imgur.com/1APPgCO.png" noloading></amp-img>
+        </a>
+        <div class="header-right">
+            <span class="register-section">
+                <a href="http://13.251.98.74/id-ID/Member/Register/?R=E40D8D5A" rel="nofollow" class="register-button" title="Daftar Slot Pulsa" target="_blank">Daftar</a></span>
+            <span class="register-section">
+                <a href="http://13.251.98.74/id-ID/Member/Register/?R=E40D8D5A" rel="nofollow" class="register-button" title="Login Slot Pulsa" target="_blank">Login</a>
+            </span>
+        </div>
+    </div>
+
+
+    <amp-carousel class="carousel-container" layout="responsive" width="1900" height="505" type="slides" autoplay delay="2000" loop>
+        <amp-img title="Slot Pulsa Bonus Pola Gacor" src="https://imgur.com/QUGARSr.jpg" alt="slot online" width="1900" height="505" layout="responsive"></amp-img>
+    </amp-carousel>
+
+
+
+    <footer class="footer-container">
+        <div class="contact-list-container">
+            <ul class="contact-list container">
+                <li>
+                    <a href="http://13.251.98.74/id-ID/Member/Register/?R=E40D8D5A" target="_blank" rel="nofollow noreferrer">
+                            <i>
+                                <amp-img layout="responsive" height="80" width="80" src="https://imgur.com/po48IMO.png"></amp-img>
+                            </i>
+                            Login
+                        </a>
+                </li>
+                <li>
+                    <a href="http://13.251.98.74/id-ID/Member/Register/?R=E40D8D5A" target="_blank" rel="nofollow noreferrer">
+                            <i>
+                                <amp-img layout="responsive" height="80" width="80" src="https://imgur.com/VFl2bGN.png"></amp-img>
+                            </i>
+                            Daftar
+                        </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="site-description">
+            <div class="container">
+                <table class="tbuah" style="width:100%; background:#c29031">
+                    <thead>
+                        <tr>
+                            <th colspan="3">Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px;">Minimal Slot Deposit</td>
+                            <td style="padding: 10px;">💰Rp25.000</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Minimal Slot Withdraw</td>
+                            <td style="padding: 10px;">💰Rp50.000</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Waktu Deposit</td>
+                            <td style="padding: 10px;">1 Menit</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Waktu Penarikan</td>
+                            <td style="padding: 10px;">3 Menit</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Top Provider Slot Online</td>
+                            <td style="padding: 10px;">Pragmatic Play, Microgaming, PGSoft dan Joker123</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Metode</td>
+                            <td style="padding: 10px;">💵 Transfer Bank,💶 E-Wallet,💷 Pulsa</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Mata Uang</td>
+                            <td style="padding: 10px;">🏦IDR (Indonesian Rupiah)🏦</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Jam Operasional</td>
+                            <td style="padding: 10px;">🥇24 Jam Online🥇</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h1><span style="color: #c29031;text-align: center;">Rajaslot7 Agen Slot Pulsa Online Bonus Tergacor Auto Maxwin</span></h1>
+
+                <p style="text-align: justify;"><strong>Rajaslot7</strong> merupakan situs agen slot pulsa via online dengan informasi bonus tergacor jaminan auto maxwin dan permainan <a href="https://kuy-33l.pages.dev/" style="color: #c29031">slot depo pulsa hanya 10 Ribu</a>.</p>
+
+                <p style="text-align: justify;">Di balik kemudahan bermain judi yang mampu Anda dapatkan, nyatanya masih ada rintangan yang mampu Anda temukan kalau mengambil keputusan untuk bermain judi online. Salah satu rintangan ini adalah memilih agen judi online terbaik. Ini dikarenakan dikarenakan meledaknya judi online sebabkan banyak situs-situs judi online baru bermunculan. Sayangnya, situs-situs ini justru jalankan kecurangan yang sebabkan pemain merugi.</p>
+
+                <p style="text-align: justify;">Untuk mengantisipasi rintangan seperti ini, Anda mampu mencari terlebih dahulu di internet mengenai situs judi apa yang direkomendasikan. Pilihlah bandar judi online yang sesungguhnya udah memiliki rekam jejak dan lihat bagus di internet, seperti Rajaslot7.</p>
+                <p style="text-align: justify;">Karena menjadi partner formal judi online di Indonesia, Rajaslot7 bebas dari kecurangan supaya Anda mampu bermain bersama dengan tenang dan nyaman. Menariknya lagi, Rajaslot7 mampu diakses melalui banyak perangkat, menjadi dari computer sampai smartphone bersama dengan proses operasi Android atau pun iOs.</p>
+
+
+                <h2><span><a href="https://kuy-33l.pages.dev/" style="color: #c29031">Daftar Slot Deposit Pulsa Tanpa Potongan Paling Gacor</a></span></h2>
+
+                <p style="text-align: justify;">Slot deposit pulsa merupakan sebuah inovasi terakhir berasal dari agen judi online slot deposit pulsa tanpa potongan terpercaya yang terbukti gacor terpercaya. Melalui link slot deposit pulsa Anda dapat nikmati banyak sekali keuntungan berasal dari agen terpercaya bersama modal receh dan renda.</p>
+                <p style="text-align: justify;">Sebagai agen judi slot online terbaru, Slot Pulsa terhitung menyediakan banyak sekali permainan slot gacor hari ini. Banyaknya tipe slot yang di tawarkan pula memberikan kesempatan menang lebih tinggi daripada agen judi lainnya.</p>
+                <p style="text-align: justify;">Link situs slot pulsa resmi di sokongan langsung oleh 8 provider terkenal dunia yang tidak perlu kamu ragukan kualitasnya. Sebab provider yang tiba di agen resmi slot memakai pulsa telkomsel ataupun xl tanpa potongan yaitu pemrakarsa kehadiran permainan slot online berupa console android, tablet, komputer, netbook dan juga ios buat pertama kali di dunia. Hingga bersama memahami andaikata provider yang terdapat di mari telah miliki pengalaman yang benar-benar oke, hingga dapat sebabkan permainan paling baik dan juga miliki RTP besar buat member setia agen slot deposit memakai pulsa tanpa potongan.</p>
+
+
+
+                <h2><span style="color: #c29031">Agen Slot Deposit Pulsa Tanpa Potongan Dengan Customer Service 24 Jam</span></h2>
+
+                <p style="text-align: justify;">Agen Slot Deposit Pulsa Tanpa Potongan Telkomsel, XL dan juga TRI merupakan tidak benar satu kelebihan yang dapat kamu nikmati bersama deposit memakai pulsa gara-gara tidak perlu untuk berangkat ke bank jauh berasal dari ribet cuma melakukan deposit oleh gara-gara itu agen judi slot online terpercaya deposit memakai Pulsa Tanpa Potongan supaya member lebih ringan buat melakukan deposit.</p>
+                <p style="text-align: justify;">Selaku agen resmi slot deposit pulsa tanpa potongan pula terhitung telah banyak fakta berasal dari member setia kita gara-gara bersama sedikitnya deposit pulsa dapat meraup kemenangan hingga jutaan rupiah oleh gara-gara itu kamu tunggu khususnya dahulu? jadi ayo daftar disini coba merasakan pengalaman yang optimal dan juga tidak sempat kamu rasakan</p>
+                <p style="text-align: justify;">Agen resmi slot min deposit 10000 memakai pulsa tanpa potongan paling baik Indonesia, kita tentu telah menyajikan fasilitas pembeli care yang dapat kamu kontak kapanpun. Lewat fasilitas hirau pembeli setia ini, kamu dapat bagikan seluruh kritikan dan juga wejangan yang kamu miliki kala bermain bandar judi slot online depo 10rb memakai pulsa. Untuk masing-masing peringatan dan juga kritikan yang kamu berikan, hendaklah kita evaluasi supaya dapat memberikan fasilitas yang lebih bagus lagi ke bagian setia bandar slot deposit pulsa 10.000 tanpa potongan.</p>
+
+                <h2><span style="color: #c29031">Link Slot Deposit Pulsa XL &amp; Telkomsel Paling Gacor 2022</span></h2>
+
+                <p style="text-align: justify;">Selainnya berikan fasilitas paling baik buat lebih dari satu pemain, link slot deposit pulsa gacor menyajikan bermacam- macam alterasi permainan yang dapat kamu cicipi bersama betul- betul ringkas memakai 1 akun slot saja. Seluruh permainan yang terdapat pada link slot deposit 10000 melalui pulsa tanpa potongan, disediakan secara langsung oleh 7 pengembang benar-benar gacor kala ini di Indonesia. Berikut merupakan daftar provider slot yang benar-benar gacor yang dapat kamu permainkan memadai bersama min deposit 10000 melalui pulsa xl dan juga telkomsel tanpa potongan :<br />Slot Pulsa Habanero<br />Slot Pulsa Joker123<br />Slot Pulsa Pragmatic Play<br />Slot Pulsa Spade Gaming<br />Slot Pulsa CQ9<br />Slot Pulsa PG SOft</p>
+                <p style="text-align: justify;">provider di atas selaku pengembang yang telah miliki lisensi resmi berasal dari komisi game judi internasional. Sampai dapat ditegaskan andaikata permainan yang kita sajikan telah teruji dan juga dapat dibuktikan Fair- play. Hingga tidak tidak benar andaikata dikala ini lebih banyak slotter Indonesia berlomba- lomba buat main permainan slot pulsa benar-benar gacor yang menyediakan oleh situs benar-benar dipercaya deposit pulsa pulsa tanpa potongan.</p>
+
+
+                <h2><span style="color: #c29031">FAQ - Pertanyaan Mengenai Judi Slot &amp; Slot Gacor Pulsa</span></h2>
+                <p style="text-align: justify;"><br />Di sini, di Slot88, kita fokus untuk mendukung member baru memahami dunia permainan judi slot online. Salah satu langkah ringan kita melakukannya adalah bersama menyediakan Pertanyaan yang Sering Diajukan. Ini merupakan beraneka pertanyaan lazim yang sering ditanyakan member kami. Untuk menghemat kala dan tenaga, Anda dapat memperoleh jawaban cepatnya di sini kalau pertanyaan Anda tercantum. Jika tidak, hubungi kita atau tim bantuan agen slot online ini.</p>
+                <p style="text-align: justify;"><br /><strong>Apa Itu Slot Pulsa?</strong></p>
+                <p style="text-align: justify;"><br />Slot pulsa adalah sebutan berasal dari slot online deposit pulsa yang dapat dimainkan bersama isi saldo game kalian berasal dari pulsa. Slot pulsa sendiri baru hadir pada agen slot terpercaya</p>
+                <p style="text-align: justify;"><br /><strong>Apa Itu RTP Slot?</strong></p>
+                <p style="text-align: justify;"><br />RTP slot adalah kepanjangan berasal dari return to player, umumnya jadi kamu sering bermain pada mesin slot online, maka jadi tinggi terhitung tingkat persentase untuk memperoleh jackpot slot online.</p>
+                <p style="text-align: justify;"><br /><strong>Berapa Win Rate Slot Online Pulsa</strong></p>
+                <p style="text-align: justify;"><br />Besaran win rate pada setiap permainan slot online pulsa sangatlah berbeda-beda. Jadi sesungguhnya kita tidak dapat menentukan berapa nilai win rate pada seluruh game slot pulsa. Tetapi umumnya win rate game slot pulsa sebesar 97%.</p>
+                <p style="text-align: justify;"><br /><strong>Apakah Proses Transaksi Depo dan WD Tercepat?</strong></p>
+                <p style="text-align: justify;"><br />Pastinya!! Kami cuma memerlukan kala tidak cukup berasal dari 2 menit untuk melakukan sistem deposit dan penarikan dana pemain. Jadi kalian tidak perlu tunggu lama untuk sistem transaksi.</p>
+            </div>
+        </div>
+
+
+    </footer>
+    <div class="fixed-footer">
+        <a href="https://tawk.to/chat/5e93329e35bcbb0c9ab03e63/default" rel="nofollow" target="_blank">
+            <amp-img class="live-chat-icon" layout="intrinsic" height="60" width="75" src="https://imgur.com/wn3pshg.png" alt="LiveChat Rajaslot7 Slot Pulsa"></amp-img>
+            Livechat
+        </a>
+        <a href="http://13.251.98.74/id-ID/Member/Register/?R=E40D8D5A" rel="nofollow" class="js_live_chat_link live-chat-link" target="_blank">
+            <amp-img class="live-chat-icon" layout="intrinsic" height="110" width="110" src="https://imgur.com/VFl2bGN.png" alt="Daftar Rajaslot7 Slot Pulsa"></amp-img>
+            Daftar
+        </a>
+        <a href="http://13.251.98.74/id-ID/Member/Register/?R=E40D8D5A" rel="nofollow" target="_blank">
+            <amp-img class="live-chat-icon" layout="intrinsic" height="75" width="75" src="https://imgur.com/po48IMO.png" alt="Bonus Rajaslot7 Slot Pulsa"></amp-img>
+            Login
+        </a>
+    </div>
+</body>
+
+</html>
